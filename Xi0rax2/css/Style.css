@@ -1,0 +1,80 @@
+body{
+	background-image:url(background.png);
+	font-family:"Times New Roman";
+	font-size:30px;
+	font-style:normal;
+	color:black;
+	}
+
+.center{
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		width:40%;
+		font-family:"Times New Roman";
+		font-style:normal;
+		}
+
+h1{
+	font-size:30px;
+	font-family:"Arial";
+	color:white;
+	font-style:italic;
+	text-align:right;
+	font-weight:bolder;
+	}
+
+p{
+	text-align:left;
+	font-family:"Times New Roman";
+	font-size:18px;
+	color:black;
+	font-style:normal;
+	letter-spacing:0.5px;
+}
+
+i{
+	font-size:20px;
+	color:black;
+	font-style:italic;
+	font-family:"Times New Roman";
+	text-decoration:none;
+}
+
+ol {
+	list-style-type:lower-alpha;
+	font-size:18px;
+	color:black;
+	font-family:"Times New Roman";
+	font-style:normal;
+	letter-spacing:0.5px;
+}
+
+#red
+{
+	text-decoration:underline;
+	color:red;
+	font-size:20px;
+	font-style:normal;
+	font-family:"Times New Roman";
+}
+
+#blue
+{
+	color:blue;
+	font-style:italic;
+	font-size:20px;
+	font-family:"Times New Roman";
+	text-decoration:none;
+}
+
+.big 
+
+{
+	font-size:22px;
+	font-style:italic;
+	text-decoration:underline;
+	color:black;
+	font-family:"Times New Roman";
+	
+}
