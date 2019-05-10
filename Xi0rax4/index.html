@@ -1,0 +1,113 @@
+<!--
+Печаткин Константин
+18ВП2
+Лабораторная работа 4
+Вариант 16
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/script.js" type="text/javascript"></script>
+    <title>Тестирование по биологии</title>
+</head>
+<body>
+<header>Эволюция живой природы</header>
+<div class="wrapper">
+    <div id="start_menu">
+
+        <input type="button" value="Начать тестирование" class="start_button" onclick="begin()">
+        <input type="button" value="Настройки" class="start_button" onclick="settings()">
+        <input type="button" value="Результаты" class="start_button" onclick="statistics()">
+        <input type="button" value="Выйти" class="start_button" onclick="window.close()">
+    </div>
+    <div id="test_menu">
+        <div id="info_panel"><p class="quest">Вопрос:</p>
+            <p class="quest" id="cur_q">Undefined</p>
+            <p class="quest" id="done_q">Undefined</p>
+            <p class="quest" id="correct_q">Undefined</p>
+            <p id='time' class="ans">--:--</p>
+            <p class="ans">Время:</p></div>
+        <div class="container">
+            <div id="question"><p class="question" id="text_desc">Undefined</p></div>
+            <div id="answer">
+            <form id="answerForm" name="answerForm">
+                <div class="block" id="radioBlock">
+                    <label for="radio1"><input id="radio1" class="radio" name="radio" type="radio" value="1">Undefined</label>
+                    <label for="radio2"><input id="radio2" class="radio" name="radio" type="radio" value="2">Undefined</label>
+                    <label for="radio3"><input id="radio3" class="radio" name="radio" type="radio" value="3">Undefined</label>
+                    <label for="radio4"><input id="radio4" class="radio" name="radio" type="radio" value="4">Undefined</label>
+                </div>
+
+                <div class="block" id="checkboxBlock">
+                    <label for="checkbox1"><input class="checkbox" id="checkbox1" name="checkbox" type="checkbox">Undefined</label>
+                    <label for="checkbox2"><input class="checkbox" id="checkbox2" name="checkbox" type="checkbox">Undefined</label>
+                    <label for="checkbox3"><input class="checkbox" id="checkbox3" name="checkbox" type="checkbox">Undefined</label>
+                    <label for="checkbox4"><input class="checkbox" id="checkbox4" name="checkbox" type="checkbox">Undefined</label>
+                </div>
+
+                <div class="block" id="selectionBlock">
+                    <label for="selection"></label>
+                    <select id="selection" name="selection">
+                        <option id="selection1" value="1">Undefined</option>
+                        <option id="selection2" value="2">Undefined</option>
+                        <option id="selection3" value="3">Undefined</option>
+                        <option id="selection4" value="4">Undefined</option>
+                    </select>
+                </div>
+
+                <div class="block" id="textBlock">
+                    <label for="textField">Ваш ответ: </label>
+                    <input autocomplete="off" name="textField" id="textField" type="text">
+                </div>
+                            </form>
+            </div>
+        </div>
+        <div id="nav_panel">
+            <input type="button" value="1" class="num_q" onclick="switchQuestion(0)" title="Не отвечен">
+            <input type="button" value="2" class="num_q" onclick="switchQuestion(1)" title="Не отвечен">
+            <input type="button" value="3" class="num_q" onclick="switchQuestion(2)" title="Не отвечен">
+            <input type="button" value="4" class="num_q" onclick="switchQuestion(3)" title="Не отвечен">
+            <input type="button" value="5" class="num_q" onclick="switchQuestion(4)" title="Не отвечен">
+            <input type="button" value="6" class="num_q" onclick="switchQuestion(5)" title="Не отвечен">
+            <input type="button" value="7" class="num_q" onclick="switchQuestion(6)" title="Не отвечен">
+            <input type="button" value="8" class="num_q" onclick="switchQuestion(7)" title="Не отвечен">
+            <input type="button" value="9" class="num_q" onclick="switchQuestion(8)" title="Не отвечен">
+            <input type="button" value="10" class="num_q" onclick="switchQuestion(9)" title="Не отвечен">
+            <input type="button" value="Ответить" class="nav_button" id="reply" onclick="check()">
+            <input type="button" value="Завершить" class="nav_button" id="stop" onclick="stop()">
+        </div>
+    </div>
+    <div id="doneTable">
+        <p id='complete' class="complete">Вы еще не проходили тестирование</p>
+    <table class="table" id="table">
+        <thead>
+        <tr>
+            <th>
+                Ваш ответ
+            </th>
+            <th>
+                Правильный ответ
+            </th>
+        </tr>
+        </thead>
+        <tbody id="results">
+        </tbody>
+    </table>
+        <input type="button" id="main_m" value="Главное меню" onclick="main()">
+    </div>
+        <div id="settings">
+            <h1>Настройки</h1>
+            <label for="shuffle"><input type="checkbox" name="shuffle" id="shuffle">Перемешивать вопросы</label>
+            <label for="timer"><input type="checkbox" name="timer" id="timer" onchange="updateTimer()">Установить таймер</label>
+            <label for="min"><input type="number" id="min" min="0" max="59" name="min">мин</label>
+            <label for="sec"><input type="number" name="sec" min="0" max="59" id="sec">сек</label>
+            <input type="button" value="Применить" id="apply" onclick="settingsApply()">
+            <input type="button" value="Назад" id="back" onclick="main_menu()">
+        </div>
+    </div>
+</div>
+<footer>All rights reserved</footer>
+</body>
+</html>

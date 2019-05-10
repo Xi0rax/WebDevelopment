@@ -1,0 +1,369 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body
+{
+    width:100%;
+    height:100%;
+}
+
+body
+{
+    background: url(img/background.jpg);
+}
+
+header
+{
+    position:relative;
+    width:100%;
+    height:5%;
+    text-align: center;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    font-family: "monotype corsiva", sans-serif ;
+    font-size: 24px;
+    background-color: cyan;
+}
+
+.wrapper
+{
+    width:100%;
+    height:90%;
+    position:relative;
+}
+
+footer
+{
+    width:100%;
+    height:5%;
+    text-align:center;
+    position:relative;
+}
+
+.start_button {
+    display:flex;
+    flex-direction: row;
+    width: 18%;
+    height: 3rem;
+    margin-top: 11rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #f9f146;
+    font-family: "monotype corsiva", sans-serif;
+    font-size: 24px;
+    margin-left: 5rem;
+    transition: all 0.1s;
+    position:relative;
+    text-align:center;
+}
+
+.start_button:hover
+{
+    background-color: darkblue;
+    color: #f9f146;
+}
+
+.start_button:active
+{
+    background-color: darkred;
+    color: black;
+}
+
+#start_menu{
+    display:flex;
+    position:absolute;
+    flex-direction: row;
+    width:100%;
+    height:100%;
+}
+
+#test_menu
+{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display: none;
+}
+
+#info_panel {
+    width: 100%;
+    height: 4rem;
+    background: cyan;
+    margin-top: 1rem;
+    border: 1px solid darkred;
+    border-radius: 10px;
+}
+
+#question {
+
+    float: left;
+    width: 69%;
+    height: 100%;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    margin-top: 1rem;
+    background-color: cyan;
+    position: relative;
+}
+
+#answer {
+
+    float: right;
+    width: 30%;
+    height: 100%;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    margin-top: 1rem;
+    background-color: cyan;
+    position: relative;
+}
+.quest
+{
+    float:left;
+    position:relative;
+    margin:1rem;
+}
+
+.ans
+{
+    float:right;
+    position:relative;
+    margin:1rem;
+}
+
+#nav_panel
+{
+    width:100%;
+    height:3rem;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    position:relative;
+    background-color: cyan;
+}
+
+.container {
+
+    width: 100%;
+    height: 70%;
+    position: relative;
+    margin-bottom:2rem;
+}
+
+.num_q
+{
+    margin:1rem;
+    border:1px solid chartreuse;
+    border-radius: 5px;
+    background:green;
+    color:yellow;
+    transition: all 0.1s;
+}
+
+.num_q:disabled
+{
+    background-color: crimson;
+    color: #f9f146;
+}
+
+.nav_button
+{
+    float:right;
+    margin:1rem;
+    border:1px solid chartreuse;
+    border-radius: 5px;
+    background:green;
+    color:yellow;
+    transition: all 0.1s;
+}
+
+.nav_button:hover,.num_q:hover
+{
+    background-color:darkblue;
+    color:crimson;
+}
+
+.nav_button:active,.num_q:active
+{
+    background-color: darkred;
+    color: black;
+}
+
+.block
+{
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    visibility: hidden;
+}
+
+.radio,.checkbox
+{
+    margin-top: 1rem;
+}
+
+#radioBlock2,#radioBlock3
+{
+    visibility: hidden;
+}
+
+.question
+{
+    font-family:"monotype corsiva", sans-serif;
+    font-size:2rem;
+}
+
+.text_block
+{
+    margin:7rem;
+    position:absolute;
+    visibility: hidden;
+}
+
+#selectionBlock {
+    position: absolute;
+    font-size: 15px;
+    font-family:"monotype corsiva",sans-serif;
+    margin:8rem;
+    visibility: hidden;
+}
+
+#selection
+{
+    height:2rem;
+    width:10rem;
+}
+
+#textBlock
+{
+    margin:8rem;
+}
+
+#textField
+{
+    width: 10rem;
+    height:2rem;
+}
+
+#doneTable {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    align-content: center;
+}
+
+.correct {
+    color:green;
+}
+
+.incorrect
+{
+    color:red;
+}
+
+.table td, .table th{
+    padding:.5rem;
+    border:1px solid crimson;
+    background-color: cyan;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.table thead td, .table thead th
+{
+    color:black;
+    background-color: cyan;
+    width: 50%;
+}
+
+.table {
+    width: 20%;
+    height:70%;
+    display: none;
+    margin:auto;
+}
+.complete
+{
+    position:relative;
+    width: 25%;
+    margin:1rem auto 1rem;
+    height:5%;
+    text-align: center;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    font-family: "monotype corsiva", sans-serif ;
+    font-size: 24px;
+    background-color: cyan;
+}
+
+#settings
+{
+    width:30%;
+    height:90%;
+    border:1px solid darkred;
+    border-radius:10px;
+    background: cyan;
+    position:relative;
+    margin-top:1rem;
+    margin-left:auto;
+    margin-right:auto;
+    display: none;
+    flex-direction: column;
+}
+
+h1
+{
+    text-align: center;
+    font-family: "monotype corsiva", sans-serif;
+}
+
+#shuffle, #timer
+{
+    margin:1rem;
+}
+
+#min,#sec
+{
+    margin:1rem;
+}
+#apply,#back
+{
+    width:50%;
+    height:2rem;
+    margin:1rem auto 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #f9f146;
+    font-family: "monotype corsiva", sans-serif;
+    transition: all 0.1s;
+    position:relative;
+    font-size: 24px;
+}
+
+#apply:hover,#back:hover,#main_m:hover
+{
+    background-color: darkblue;
+    color: #f9f146;
+}
+
+#apply:active,#back:active,#main_m:active
+{
+    background-color: darkred;
+    color: black;
+}
+#main_m
+{
+    position:relative;
+    width: 25%;
+    margin:3rem auto 0;
+    text-align: center;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    font-family: "monotype corsiva", sans-serif ;
+    font-size: 24px;
+    background-color: #f9f146;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.1s;
+}
