@@ -1,0 +1,26 @@
+[POST]
+first_name: Дин
+
+last_name: Винчестер
+
+email: dean.winchester@gmail.com
+
+age: 39
+
+Comp_Type: Intelligent
+
+selection: OwnGame
+
+[POST]
+first_name: Дин
+
+last_name: Винчестер
+
+email: dean.winchester@gmail.ru
+
+age: 39
+
+Comp_Type: Intelligent
+
+selection: OwnGame
+
