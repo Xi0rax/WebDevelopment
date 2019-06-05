@@ -1,0 +1,27 @@
+<!-- Печаткин Константин Лабораторная работа 5 Вариант 16 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <title>Цифры в контейнере</title>
+</head>
+<body>
+<header>Игра "Цифры в контейнере"</header>
+<div id="wrapper">
+    <div id="inspector1"><p class="scores">Очки:</p><p class="scores">Undefined</p><p class="hint">Undefined</p></div>
+    <div id="inspector2"><p class="level">Уровень:</p>
+        <p class="level">Undefined</p></p><p class="try">Попытка:</p><p class="try">Undefined</p><input type="button" class="ingame_button" value="Закончить игру" id="complete_game" onclick="game_over()"> </div>
+    <div id="main_field">
+        <div id="add"></div>
+        <div id="container"></div>
+        <div id="confirm"></div>
+    </div>
+</div>
+<div id="start_menu"><div id="button_block"><input type="button" class="start_buttons" value="Начать игру" onclick="lets_go()"><input type="button" class="start_buttons" value="Рекорды" onclick="records()"><input type="button" class="start_buttons" value="Выйти" onclick="window.close()"></div></div>
+<div id="records"><table id="recording"><thead><tr><th>Имя</th><th>Очки</th><th>Максимальный уровень</th></tr></thead><tbody id="results"></tbody></table><input type="button" class="record_button" value="Назад" onclick="back()"></div>
+<div id="collect"><label for="name" class="name">Введите ваше имя:</label><input type="text" id="name" autocomplete="off"><input type="button" value="Подтвердить" class="confirm" onclick="add_gamer()"></div>
+</body>
+</html>
