@@ -437,7 +437,7 @@ function Timer() {
 }
 
 function updateTimer() {
-    if (document.getElementById('timer').checked===false) {
+   if (!document.getElementById('timer').checked) {
         document.getElementById('min').disabled = true;
         document.getElementById('sec').disabled = true;
     }
@@ -475,12 +475,13 @@ function main()
 }
 
 function settingsApply() {
-    if (document.getElementById('timer').checked&&document.getElementById('min').value<60&&document.getElementById('sec').value<60&&(document.getElementById('min').value>0&&document.getElementById('sec').value>=0)||(document.getElementById('min').value>=0&&document.getElementById('sec').value>0)||(document.getElementById('min').value>0&&document.getElementById('sec').value>0))
+    if (document.getElementById('timer').checked&&document.getElementById('min').value<60&&document.getElementById('sec').value<60&&((document.getElementById('min').value>0&&document.getElementById('sec').value>=0)||(document.getElementById('min').value>=0&&document.getElementById('sec').value>0)||(document.getElementById('min').value>0&&document.getElementById('sec').value>0)))
         {
         is_timer = true;
     }
-    else if (!document.getElementById('timer').checked)
+    else if (!document.getElementById('timer').checked) {
         is_timer = false;
+    }
     else
         {
         alert("Введены неверные данные");
@@ -490,5 +491,12 @@ function settingsApply() {
         shuffle = true;
     else
         shuffle=false;
+    main_menu();
+}
+
+function cancel()
+{
+    document.getElementById('shuffle').checked=shuffle;
+    document.getElementById('timer').checked=is_timer;
     main_menu();
 }
