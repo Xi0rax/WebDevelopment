@@ -1,0 +1,96 @@
+<!--
+	Лабораторная работа 3
+	18ВП2
+	Печаткин Константин
+	Вариант 16 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/document.js" type="text/javascript"></script>
+    <title>Угадай число</title>
+</head>
+<body>
+<div class="common">
+    <div class="start">
+        <div id="container">
+            <h1 class="center">Угадай число - Правила игры</h1>
+            <p class="rules">Игроку дается пять попыток, чтобы отгадать число. За каждое отгаданное число даются очки. В
+                случае неправильного
+                ответа он будет получать подсказку "больше" или "меньше" в зависимости от введенного числа. Если игрок в
+                течение пяти попыток не отгадывает число, то игра заканчивается. </p>
+            <p class="center">Начисление очков:</p>
+            <table class="scores">
+                <tr>
+                    <th class="cell_header">Попытка</th>
+                    <th class="cell_header">Очки</th>
+                <tr>
+                    <th class="cell">1</th>
+                    <th class="cell">10</th>
+                </tr>
+                <tr>
+                    <th class="cell">2</th>
+                    <th class="cell">8</th>
+                </tr>
+                <tr>
+                    <th class="cell">3</th>
+                    <th class="cell">6</th>
+                </tr>
+                <tr>
+                    <th class="cell">4</th>
+                    <th class="cell">4</th>
+                </tr>
+                <tr>
+                    <th class="cell">5</th>
+                    <th class="cell">2</th>
+                </tr>
+            </table>
+            <div class="buttonsPanel">
+                <input id="start" type="button" value="Начать игру" class="start_button" onclick="main_menu()">
+                <input type="button" value="Выйти из игры" class="exit_button" onclick="leave()">
+            </div>
+        </div>
+        <div id="level" class="level"><h1 class="center">Выберите уровень сложности</h1>
+            <ul>
+                <li><input type="button" class="exit_button" value="Легкий" onclick="game(0,10)" id="easy">
+                    <p class="rules">от 0 до 10</p></li>
+                <li><input type="button" class="exit_button" value="Средний" onclick="game(0,100)" id="medium">
+                    <p class="rules">от 0 до 100</p></li>
+                <li><input type="button" class="exit_button" value="Сложный" onclick="game(0,1000)" id="difficult">
+                    <p class="rules">от 0 до 1000</p></li>
+                <li><input type="button" class="exit_button" value="Хардкор" onclick="game(0,10000)" id="hardcore">
+                    <p class="rules">от 0 до 10000</p></li>
+            </ul>
+            <input type="button" class="back" value="Главное меню" onclick="back_to_menu('level')" id="back_0">
+        </div>
+        <div id="game" class="game_process">
+            <div class="info">
+                <p class="attempt">Попытка:</p>
+                <p class="count" id="val_att">1</p>
+
+                <p class="val_level" id="val_lev">1</p>
+                <p class="level_count">Уровень: </p>
+
+                <p class="score_count" id="val_score">0</p>
+                <p class="score">Очки: </p>
+            </div>
+            <p id="hints" class="hint">Подсказка</p>
+            <div>
+                <input type="number" placeholder="Введите число" id="num_box">
+            </div>
+            <div>
+                <input type="button" class="back1" value="Главное меню" onclick="back_to_menu('game')" id="back1">
+            </div>
+        </div>
+        <div id="conf" class="confirm">
+            <p id="message" class="message">Вы уверены?</p>
+            <div class="buttonsPanel">
+                <input type="button" value="Да" class="confirm_button" onclick="Yes()">
+                <input type="button" value="Нет" class="confirm_button" onclick="No()">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
